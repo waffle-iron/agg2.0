@@ -1,0 +1,105 @@
+@mixin image($url) {
+  @extend .cover;
+  background: url($image + $url) no-repeat center center;
+}
+
+header {
+  position: relative;
+  height: 8*$o;
+  margin: 0;
+  padding: 2*$o 2*$o;
+  z-index: 100;
+}
+
+footer {
+  position: relative;
+  margin: 0;
+  padding: 2*$o 2*$o;
+  z-index: 100;
+  background-color: $primary;
+}
+
+
+.columns * {
+  position: relative;
+}
+
+.columns {
+  position: relative;
+}
+
+.page {
+  min-height: calc(100vh - 96px);
+}
+
+.content {
+  position: relative;
+}
+
+.overlay {
+  @extend .transition-2;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: $white;
+  padding: 2*$o  2*$o;
+  opacity: 1;
+  box-shadow: 0 0 3*$o $dark;
+}
+
+.blackout {
+  @extend .overlay;
+  position: absolute;
+  z-index: auto;
+  background-color: $dark;
+  box-shadow: none;
+}
+
+.bg-img {
+  @extend .cover;
+  background: no-repeat center center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.placeholder-img {
+  @include image("placeholder.png");
+}
+
+.bg-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: $border solid $primary;
+}
+
+
+
+@media print, screen and (max-width: 39.999em) {
+  footer, header {
+    padding: 2*$o $bp;
+  }
+
+  .overlay {
+    padding: 2*$o $bp;
+  }
+}
+
+@media print, screen and (min-width: 40em) and (max-width: 63.999em) {
+
+}
+
+@media print, screen and (min-width: 64em) {
+  .overlay, header, footer {
+    padding: 2*$o 3*$o;
+  }
+
+}

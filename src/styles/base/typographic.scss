@@ -1,0 +1,80 @@
+//@import "fonts/material-icons";
+@import "fonts/open-sans";
+
+
+HTML {
+  font-family: "Open Sans", "PT Sans Caption", sans-serif;
+  font-weight: 300;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $black;
+}
+
+a:hover, a.active {
+  color: $primary;
+}
+
+h1, .h1 {
+  font-size: 3*$o;
+}
+
+h2, .h2 {
+  font-size: 2*$o;
+}
+
+h3, p, .h3, .p {
+  font-size: 1.5*$o;
+}
+
+h4, .h4 {
+  font-size: 1*$o;
+}
+
+h1, h2, h3, h4, h5, p, .h1, .h2, .h3, .h4, .h5, .p, .huge-text, li {
+  &.white {
+    color: $white;
+  }
+  &.black {
+    color: $black;
+  }
+  &.dark {
+    color: $dark;
+  }
+   &.primary {
+    color: $primary;
+  }
+  &.bold {
+    font-weight: 600;
+  }
+  &.light {
+    font-weight: 400;
+  }
+  &.thin {
+    font-weight: 300;
+  }
+  &.uppercase {
+    text-transform: uppercase;
+  }
+  &.capitalize {
+     text-transform: capitalize;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+  &.no-decor {
+    text-decoration: none;
+  }
+}
+
+.huge-text {
+  color: $disabled;
+  font-size: 6*$o;
+  font-weight: 900;
+}

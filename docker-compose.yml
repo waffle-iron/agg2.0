@@ -1,0 +1,13 @@
+
+version: '2'
+
+services:
+  reactapp:
+    image: reactapp:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 2000:2000

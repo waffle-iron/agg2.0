@@ -1,0 +1,118 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.3.1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+
+// Dependencies
+@import '_vendor/normalize-scss/sass/normalize';
+@import '_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '_vendor/sassy-lists/stylesheets/helpers/true';
+@import '_vendor/sassy-lists/stylesheets/functions/purge';
+@import '_vendor/sassy-lists/stylesheets/functions/remove';
+@import '_vendor/sassy-lists/stylesheets/functions/replace';
+@import '_vendor/sassy-lists/stylesheets/functions/to-list';
+
+// Settings
+// import your own `settings` here or
+// import and modify the default settings through
+// @import 'settings/settings';
+
+// Sass utilities
+@import 'scss/util/util';
+
+// Global variables and styles
+@import 'scss/global';
+
+// Components
+@import 'scss/grid/grid';
+@import 'scss/typography/typography';
+@import 'scss/forms/forms';
+@import 'scss/components/visibility';
+@import 'scss/components/float';
+@import 'scss/components/button';
+@import 'scss/components/button-group';
+@import 'scss/components/accordion-menu';
+@import 'scss/components/accordion';
+@import 'scss/components/badge';
+@import 'scss/components/breadcrumbs';
+@import 'scss/components/callout';
+@import 'scss/components/card';
+@import 'scss/components/close-button';
+@import 'scss/components/drilldown';
+@import 'scss/components/dropdown-menu';
+@import 'scss/components/dropdown';
+@import 'scss/components/flex';
+@import 'scss/components/responsive-embed';
+@import 'scss/components/label';
+@import 'scss/components/media-object';
+@import 'scss/components/menu';
+@import 'scss/components/menu-icon';
+@import 'scss/components/off-canvas';
+@import 'scss/components/orbit';
+@import 'scss/components/pagination';
+@import 'scss/components/progress-bar';
+@import 'scss/components/reveal';
+@import 'scss/components/slider';
+@import 'scss/components/sticky';
+@import 'scss/components/switch';
+@import 'scss/components/table';
+@import 'scss/components/tabs';
+@import 'scss/components/title-bar';
+@import 'scss/components/top-bar';
+@import 'scss/components/thumbnail';
+@import 'scss/components/tooltip';
+
+@mixin foundation-everything($flex: false) {
+  @if $flex {
+    $global-flexbox: true !global;
+  }
+
+  @include foundation-global-styles;
+  @if not $flex {
+    @include foundation-grid;
+  }
+  @else {
+    @include foundation-flex-grid;
+  }
+  @include foundation-typography;
+  @include foundation-forms;
+  @include foundation-button;
+  @include foundation-accordion;
+  @include foundation-accordion-menu;
+  @include foundation-badge;
+  @include foundation-breadcrumbs;
+  @include foundation-button-group;
+  @include foundation-callout;
+  @include foundation-card;
+  @include foundation-close-button;
+  @include foundation-menu;
+  @include foundation-menu-icon;
+  @include foundation-drilldown-menu;
+  @include foundation-dropdown;
+  @include foundation-dropdown-menu;
+  @include foundation-responsive-embed;
+  @include foundation-label;
+  @include foundation-media-object;
+  @include foundation-off-canvas;
+  @include foundation-orbit;
+  @include foundation-pagination;
+  @include foundation-progress-bar;
+  @include foundation-slider;
+  @include foundation-sticky;
+  @include foundation-reveal;
+  @include foundation-switch;
+  @include foundation-table;
+  @include foundation-tabs;
+  @include foundation-thumbnail;
+  @include foundation-title-bar;
+  @include foundation-tooltip;
+  @include foundation-top-bar;
+  @include foundation-visibility-classes;
+  @include foundation-float-classes;
+
+  @if $flex {
+    @include foundation-flex-classes;
+  }
+}
