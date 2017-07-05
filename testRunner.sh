@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl localhost | grep 'Express' -eq 1
+curl localhost:3000 | grep 'Express'
