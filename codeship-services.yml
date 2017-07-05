@@ -1,0 +1,8 @@
+app:
+  build:
+    image: ilyazubkov/achievements
+    dockerfile_path: ./back-end/Dockerfile
+  environment:
+    NODE_ENV: development
+    PORT: 3000
+  cached: true

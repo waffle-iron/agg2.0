@@ -2,16 +2,15 @@
 version: '2'
 
 services:
-  reactapp:
-    image: reactapp:latest
+  app:
     build:
-      context: .
+      context: ./back-end
       dockerfile: Dockerfile
     environment:
       NODE_ENV: development
+      PORT: 3000
     ports:
-      - 2000:2000
-      - 5858:5858
+      - 80:3000
+      - 27018:27017
     volumes:
       - .:/usr/src/app
-    command: node --debug=5858 scripts/start.js
